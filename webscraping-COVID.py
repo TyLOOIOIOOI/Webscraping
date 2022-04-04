@@ -92,3 +92,5 @@ for row in table_rows[2:51]:
 #Limit = find with limit of 1
 #keyword: allText = Obj.find(id="title",class="text")
 
+
+

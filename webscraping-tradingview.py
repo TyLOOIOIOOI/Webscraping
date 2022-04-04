@@ -50,3 +50,17 @@ for company in companies[:5]:
 #Limit = find with limit of 1
 #keyword: allText = Obj.find(id="title",class="text")
 
+stock_table = soup.findAll('tbody')
+
+stock_table = stock_table[0]
+
+rows = stock_table.findAll('tr')
+
+for row in rows[:5]:
+    cols = row.findAll('td')
+    name = cols[0].find("span", attrs ={'class'})
+    price = float(cols[1].text)
+
+    print(name)
+    print(price)
+    input()
