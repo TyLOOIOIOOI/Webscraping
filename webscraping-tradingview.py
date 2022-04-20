@@ -25,6 +25,8 @@ title = soup.title
 
 print(title.text)
 
+
+'''
 companies = soup.findAll("span", attrs={"class":"tv-screener__description"})
 
 print(companies)
@@ -50,6 +52,7 @@ for company in companies[:5]:
 #Limit = find with limit of 1
 #keyword: allText = Obj.find(id="title",class="text")
 
+
 stock_table = soup.findAll('tbody')
 
 stock_table = stock_table[0]
@@ -64,3 +67,5 @@ for row in rows[:5]:
     print(name)
     print(price)
     input()
+
+'''

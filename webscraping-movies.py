@@ -1,8 +1,8 @@
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import openpyxl as xl
-from openpyxl.styles import Font
+#import openpyxl as xl
+#from openpyxl.styles import Font
 
 
 
@@ -39,7 +39,7 @@ for x in range(1,6):
     print(gross)
     
 
-
+'''
 #create a new excel document
 wb = xl.Workbook()
 
@@ -92,4 +92,4 @@ for cell in ws[1:1]:
 
 wb.save('BoxOfficeReport.xlsx')
 
-    
+'''
