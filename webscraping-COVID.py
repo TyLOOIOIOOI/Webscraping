@@ -49,7 +49,7 @@ for row in table_rows[2:51]:
 for row in table_rows[2:51]:
     td = row.findAll("td")
 
-    state = td[1].text
+    state = td[1].text.strip()
     total_cases = int(td[2].text.replace(',',''))
     total_deaths =int(td[4].text.replace(',',''))
     total_tested =int(td[10].text.replace(',',''))
@@ -70,12 +70,18 @@ for row in table_rows[2:51]:
     test_ratio = total_cases/ total_tested
 
     if death_ratio > highest_death_rate:
-        state_death_ratio = state
+        state_death_ratio= state
+        highest_test_ratio = test_ratio
+
+    if test_ratio > highest_test_ratio:
+        state_worst_testing = state
         high_test_ratio = test_ratio
 
-    if test_ratio > highest_d_rate:
-        state_death_ratio = state
-        high_test_ratio = test_ratio
+    
+    if test_ratio < low_test_ratio:
+        state_best_testing = state
+        low_test_ratio = test_ratio
+    
 
     
 
@@ -91,6 +97,4 @@ for row in table_rows[2:51]:
 #Text: nameList = Objfind(text="the prince")
 #Limit = find with limit of 1
 #keyword: allText = Obj.find(id="title",class="text")
-
-
 
